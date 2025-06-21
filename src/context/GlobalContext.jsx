@@ -1,26 +1,19 @@
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
 const GlobalContext = createContext();
 
 const GlobalProvider = ({ children }) => {
-  // fetch or thing to ad to the context
+  const [loading, setLoading] = useState(false);
 
   return (
-    <GlobalContext.Provider
-      value={
-        {
-          // thins added to the context
-        }
-      }
-    >
+    <GlobalContext.Provider value={{ loading, setLoading }}>
       {children}
     </GlobalContext.Provider>
   );
 };
 
 function useGlobalContext() {
-  const context = useContext(GlobalContext);
-  return context;
+  return useContext(GlobalContext);
 }
 
 export { GlobalProvider, useGlobalContext };

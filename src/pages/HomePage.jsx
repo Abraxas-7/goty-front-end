@@ -1,7 +1,5 @@
 import React from "react";
 
-function HomePage() {
+export default function HomePage() {
   return <div>HomePage</div>;
 }
-
-export default HomePage;

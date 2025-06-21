@@ -3,6 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import DefaultLayout from "./layouts/DefaultLayout";
 
 import HomePage from "./pages/HomePage";
+import GamePage from "./pages/GamePage";
+import SearchPage from "./pages/SearchPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 import { GlobalProvider } from "./context/GlobalContext";
 
@@ -16,6 +19,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<DefaultLayout />}>
             <Route index element={<HomePage />} />
+            <Route path="game/:slug" element={<GamePage />} />
+            <Route path="search" element={<SearchPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </BrowserRouter>
