@@ -1,3 +1,15 @@
 export default function Footer() {
-  return <div>Footer</div>;
+  return (
+    <footer
+      className="text-white text-center py-4"
+      style={{ backgroundColor: "#04060E" }}
+    >
+      <div className="container">
+        <p className="mb-1">© 2025 GameView</p>
+        <p className="mb-0 small">
+          Progetto realizzato per fini scolastici – tutti i diritti riservati
+        </p>
+      </div>
+    </footer>
+  );
 }
