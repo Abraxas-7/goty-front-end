@@ -235,6 +235,11 @@ export default function SearchPage() {
 
                     setFormFilters(emptyFilters);
                     setFilters(emptyFilters);
+
+                    const queryParams = new URLSearchParams(
+                      emptyFilters
+                    ).toString();
+                    navigate(`?${queryParams}`);
                   }}
                 >
                   Azzera filtri
