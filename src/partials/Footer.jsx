@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container">
         <p className="mb-1">© 2025 GameView</p>
         <p className="mb-0 small">
-          Progetto realizzato per fini scolastici – tutti i diritti riservati
+          Progetto realizzato da Abraxas - tutti i diritti riservati
         </p>
       </div>
     </footer>

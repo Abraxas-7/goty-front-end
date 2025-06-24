@@ -6,6 +6,8 @@ import axios from "axios";
 import { useGlobalContext } from "../context/GlobalContext";
 
 import GameInfo from "../components/GameInfo";
+import ImageCarousel from "../components/imageCarousel";
+import GameDetailSection from "../components/GameDetailSection";
 
 export default function GamePage() {
   const { slug } = useParams();
@@ -38,6 +40,7 @@ export default function GamePage() {
 
         setGame(gameData);
         setImages(imagesRes.data.data);
+        console.log(imagesRes.data.data);
         setSections(sectionsRes.data.data);
       } catch (err) {
         console.error("Errore nel recupero dei dati del gioco:", err);
@@ -51,8 +54,22 @@ export default function GamePage() {
   }, [slug, navigate]);
 
   return (
-    <div className="container my-5">
-      {!loading && game && <GameInfo game={game} />}
-    </div>
+    <>
+      <div className="container my-5">
+        {!loading && game && <GameInfo game={game} />}
+      </div>
+
+      {images.length > 0 && <ImageCarousel images={images} />}
+
+      <div className="container my-5">
+        {sections.map((section, index) => (
+          <GameDetailSection
+            key={section.id}
+            section={section}
+            reverse={index % 2 === 0}
+          />
+        ))}
+      </div>
+    </>
   );
 }

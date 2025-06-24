@@ -26,6 +26,11 @@ select::placeholder {
   opacity: 1;
 }
 
+.slick-slide img {
+  outline: none;
+  user-select: none;
+}
+
 @keyframes pulse {
   0% {
     opacity: 0.5;
