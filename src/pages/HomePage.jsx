@@ -18,7 +18,7 @@ export default function HomePage() {
       <GameRowSection
         title="Più votati"
         endpoint={`${import.meta.env.VITE_API_URL}/games?sort=rating_desc`}
-        searchLink={`/search?sort=-created_at`}
+        searchLink={`/search?sort=rating_desc`}
       />
 
       {/* Console section */}
@@ -51,7 +51,7 @@ export default function HomePage() {
         title="Migliori disponibili anche su PC"
         endpoint={`${
           import.meta.env.VITE_API_URL
-        }/games?console=10&sort=rating_desc`}
+        }/games?console=30&sort=rating_desc`}
         searchLink={`/search?console=30&sort=rating_desc`}
       />
 

@@ -37,6 +37,14 @@ export default function GameRowSection({ title, endpoint, searchLink }) {
       {
         breakpoint: 992,
         settings: {
+          slidesToShow: 4,
+          swipe: false,
+          draggable: false,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
           slidesToShow: 2,
           swipe: false,
           draggable: false,
@@ -45,7 +53,7 @@ export default function GameRowSection({ title, endpoint, searchLink }) {
       {
         breakpoint: 576,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           swipe: false,
           draggable: false,
         },
@@ -95,7 +103,7 @@ export default function GameRowSection({ title, endpoint, searchLink }) {
                   }}
                 >
                   <div className="text-center px-2">
-                    <h5 className="mb-1 text-primary">Vedi tutti</h5>
+                    <h5 className="mb-1 text-wihite">Vedi tutti</h5>
                     <p className="small text-white-50 mb-0">
                       Mostra tutti i giochi di questa categoria
                     </p>

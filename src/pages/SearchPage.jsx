@@ -115,7 +115,7 @@ export default function SearchPage() {
         style={{ backgroundColor: "#283044" }}
       >
         <div className="row g-2">
-          <div className="col-md-9">
+          <div className="col-8 col-md-9">
             <input
               type="text"
               name="search"
@@ -130,7 +130,7 @@ export default function SearchPage() {
             />
           </div>
 
-          <div className="col-md-3">
+          <div className="col-4 col-md-3">
             <select
               name="sort"
               value={formFilters.sort}
@@ -157,7 +157,7 @@ export default function SearchPage() {
             </select>
           </div>
 
-          <div className="col-md-4">
+          <div className="col-4">
             <select
               name="console"
               value={formFilters.console}
@@ -177,7 +177,7 @@ export default function SearchPage() {
             </select>
           </div>
 
-          <div className="col-md-4">
+          <div className="col-4">
             <select
               name="genre"
               value={formFilters.genre}
@@ -197,7 +197,7 @@ export default function SearchPage() {
             </select>
           </div>
 
-          <div className="col-md-4">
+          <div className="col-4">
             <select
               name="developer"
               value={formFilters.developer}
@@ -219,7 +219,7 @@ export default function SearchPage() {
 
           <div className="col-12 mt-3">
             <div className="row justify-content-evenly">
-              <div className="col-md-4">
+              <div className="col-6 col-lg-4">
                 <button
                   type="button"
                   className="btn btn-outline-light w-100"
@@ -245,7 +245,7 @@ export default function SearchPage() {
                   Azzera filtri
                 </button>
               </div>
-              <div className="col-md-4">
+              <div className="col-6 col-lg-4">
                 <button type="submit" className="btn btn-danger w-100">
                   Cerca
                 </button>
@@ -258,7 +258,10 @@ export default function SearchPage() {
       <div className="d-flex flex-wrap justify-content-center row mt-5">
         {games.length > 0 &&
           games.map((game) => (
-            <div key={game.id} className="col-6 col-sm-4 col-md-2 mb-4">
+            <div
+              key={game.id}
+              className="col-6 col-sm-4 col-md-3 col-lg-2 mb-4"
+            >
               <GameCard game={game} />
             </div>
           ))}
