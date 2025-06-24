@@ -19,3 +19,21 @@ div {
 a {
   text-decoration: none;
 }
+
+input::placeholder,
+select::placeholder {
+  color: #fff !important;
+  opacity: 1;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
